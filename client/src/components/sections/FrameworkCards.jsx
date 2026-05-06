@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import ScrollReveal from '../ui/ScrollReveal';
 import { Eye, Layers, Move, ArrowRight } from 'lucide-react';
-import productAnalysis from '../../assets/product-analysis.svg';
-import productDesign from '../../assets/product-design.svg';
-import abstractDark from '../../assets/abstract-dark.svg';
+
+const productAnalysis = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80';
+const productDesign = 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1';
+const abstractDark = 'https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=600&h=400&fit=crop&q=80';
 
 const frameworks = [
   {

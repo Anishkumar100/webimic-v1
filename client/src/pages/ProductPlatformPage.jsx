@@ -2,18 +2,19 @@ import { Link } from 'react-router-dom';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ui/ScrollReveal';
-import { WebimicPipelineDiagram } from '../components/ui/FlowchartDiagram';
+import ParallaxImage from '../components/ui/ParallaxImage';
+import { WebimicPipelineDiagram, WireDiagram } from '../components/ui/FlowchartDiagram';
 import LogoTicker from '../components/sections/LogoTicker';
 import FAQSection from '../components/sections/FAQSection';
 import BottomCTA from '../components/sections/BottomCTA';
 import { Scan, Palette, FileText, PenTool, ArrowRight, Eye, Layers, Zap, Globe, Move, Shield } from 'lucide-react';
 
-import productAnalysis from '../assets/product-analysis.svg';
-import productDesign from '../assets/product-design.svg';
-import productTokens from '../assets/product-tokens.svg';
-import productPdf from '../assets/product-pdf.svg';
-import sampleReport from '../assets/sample-report.svg';
-import heroDashboard from '../assets/hero-dashboard.svg';
+const productAnalysis = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&q=80';
+const productDesign = 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1';
+const productTokens = 'https://images.unsplash.com/photo-1557683316-973673baf926?w=800&h=500&fit=crop&q=80';
+const productPdf = 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&fit=crop&q=80';
+const sampleReport = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&q=80';
+const heroDashboard = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop&q=80';
 
 const features = [
   {
@@ -53,40 +54,10 @@ const faqs = [
 export default function ProductPlatformPage() {
   return (
     <>
-      {/* Hero with flowing dotted wave lines */}
+      {/* Hero */}
       <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
-        {/* Flowing wave SVG background */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <svg className="absolute right-0 top-10 w-[60%] h-[80%] opacity-[0.12]" viewBox="0 0 600 500" fill="none">
-            {/* Multiple flowing wave lines with dots */}
-            {Array.from({ length: 12 }, (_, i) => {
-              const y = 40 + i * 35;
-              const wave = 30 + i * 8;
-              return (
-                <g key={i}>
-                  <path
-                    d={`M 0 ${y} Q 150 ${y - wave} 300 ${y} T 600 ${y}`}
-                    stroke="#38BDF8"
-                    strokeWidth="0.8"
-                    strokeDasharray="1 6"
-                    opacity={0.3 + (i % 3) * 0.15}
-                  />
-                  {/* Dots along the wave */}
-                  {Array.from({ length: 20 }, (_, j) => {
-                    const t = j / 20;
-                    const px = t * 600;
-                    const py = y + Math.sin(t * Math.PI * 2 + i * 0.5) * wave * 0.6;
-                    return (
-                      <circle key={j} cx={px} cy={py} r={1} fill="#38BDF8" opacity={0.2 + Math.sin(t * Math.PI) * 0.3}>
-                        <animate attributeName="opacity" values={`${0.1};${0.5};${0.1}`} dur={`${3 + i * 0.3}s`} begin={`${j * 0.15}s`} repeatCount="indefinite" />
-                      </circle>
-                    );
-                  })}
-                </g>
-              );
-            })}
-          </svg>
-        </div>
+        <CircuitBackground color="#38BDF8" density={0.5} />
+        <div className="absolute inset-0 mesh-gradient opacity-30 pointer-events-none" />
 
         <Container className="relative z-10">
           <ScrollReveal>
@@ -114,6 +85,19 @@ export default function ProductPlatformPage() {
       </section>
 
       <LogoTicker heading="Used by design-driven teams at fast-growing companies" />
+
+      {/* Wire Diagram — Data Flow */}
+      <section className="py-8 bg-dark-950">
+        <Container>
+          <ScrollReveal variant="fadeUp">
+            <WireDiagram
+              steps={['Input URL', 'Crawl', 'Screenshot', 'Tokens', 'Doc A', 'Doc B']}
+              color="#38BDF8"
+              height={130}
+            />
+          </ScrollReveal>
+        </Container>
+      </section>
 
       {/* Feature Sections with real images */}
       {features.map((feat, i) => {

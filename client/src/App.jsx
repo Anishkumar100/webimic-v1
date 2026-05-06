@@ -12,6 +12,8 @@ import AboutPage from './pages/AboutPage';
 import CareersPage from './pages/CareersPage';
 import DocsPage from './pages/DocsPage';
 import GenericPage from './pages/GenericPage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
@@ -50,7 +52,8 @@ export default function App() {
           <Route path="/docs" element={<DocsPage />} />
           <Route path="/company/partners" element={<GenericPage />} />
           <Route path="/company/events" element={<GenericPage />} />
-          <Route path="/blog" element={<GenericPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
           <Route path="/customers" element={<GenericPage />} />
           <Route path="/resources" element={<GenericPage />} />
           <Route path="/community" element={<GenericPage />} />

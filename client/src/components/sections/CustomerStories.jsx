@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import ScrollReveal from '../ui/ScrollReveal';
 import { ArrowRight, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import customer1 from '../../assets/customer1.svg';
-import customer2 from '../../assets/customer2.svg';
-import customer3 from '../../assets/customer3.svg';
+
+const customer1 = 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1';
+const customer2 = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1';
+const customer3 = 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1';
 
 const stories = [
   {

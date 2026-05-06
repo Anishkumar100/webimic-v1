@@ -4,6 +4,7 @@ import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import FAQSection from '../components/sections/FAQSection';
 import BottomCTA from '../components/sections/BottomCTA';
+import { WireDiagram, CircuitBackground } from '../components/ui/FlowchartDiagram';
 import { Check } from 'lucide-react';
 
 const plans = [
@@ -56,9 +57,11 @@ const featureRows = [
 export default function PricingPage() {
   return (
     <>
-      <section className="pt-10 pb-16 md:pt-16 md:pb-24">
+      <section className="pt-10 pb-16 md:pt-16 md:pb-24 relative overflow-hidden">
+        <CircuitBackground color="#00E8C6" density={0.35} />
+        <div className="absolute inset-0 mesh-gradient opacity-40 pointer-events-none" />
         <Container>
-          <ScrollReveal>
+          <ScrollReveal variant="blurIn">
             <div className="text-center max-w-2xl mx-auto">
               <p className="text-sm font-semibold uppercase tracking-wider text-accent-400 mb-3">Pricing</p>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.08] mb-6">Plans for teams of any size</h1>
@@ -68,12 +71,25 @@ export default function PricingPage() {
         </Container>
       </section>
 
+      {/* Wire Diagram — Analysis Pipeline */}
+      <section className="pb-8">
+        <Container>
+          <ScrollReveal variant="fadeUp">
+            <WireDiagram
+              steps={['Sign Up', 'Submit URL', 'Analyze', 'Get Reports', 'Build']}
+              color="#00E8C6"
+              height={120}
+            />
+          </ScrollReveal>
+        </Container>
+      </section>
+
       <section className="pb-20 md:pb-28">
         <Container>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {plans.map((plan, i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className={`glass-card rounded-2xl p-7 flex flex-col h-full ${plan.highlight ? 'border-accent-400/30 ring-1 ring-accent-400/20' : ''}`}>
+              <ScrollReveal key={i} variant="fadeUp" delay={i * 0.1}>
+                <div className={`glass-card rounded-2xl p-7 flex flex-col h-full ${plan.highlight ? 'border-accent-400/30 ring-1 ring-accent-400/20 animate-pulse-glow' : ''}`}>
                   {plan.highlight && <div className="text-[10px] font-bold uppercase tracking-widest text-accent-400 bg-accent-400/10 rounded-full px-3 py-1 self-start mb-4">Most popular</div>}
                   <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
                   <p className="text-sm text-muted mb-5">{plan.desc}</p>
@@ -134,6 +150,26 @@ export default function PricingPage() {
                   ))}
                 </tbody>
               </table>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </section>
+
+      {/* Why Webimic section */}
+      <section className="py-16 md:py-24">
+        <Container>
+          <ScrollReveal variant="scaleIn">
+            <div className="glass-card rounded-2xl overflow-hidden">
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="h-48 md:h-auto">
+                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=500&fit=crop&q=80" alt="Team collaboration" className="w-full h-full object-cover" loading="lazy" />
+                </div>
+                <div className="p-8 md:p-12 flex flex-col justify-center">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent-400 mb-2">Why Webimic?</p>
+                  <h3 className="text-2xl font-bold mb-3">Replace hours of manual work with minutes of automation</h3>
+                  <p className="text-sm text-muted-light leading-relaxed mb-4">Teams using Webimic report 70% faster design research, 3x more accurate token extraction, and significantly fewer design review cycles.</p>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </Container>

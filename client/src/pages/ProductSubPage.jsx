@@ -4,15 +4,16 @@ import Button from '../components/ui/Button';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import LogoTicker from '../components/sections/LogoTicker';
 import BottomCTA from '../components/sections/BottomCTA';
+import { CircuitBackground } from '../components/ui/FlowchartDiagram';
 import { Scan, Palette, FileText, PenTool, Eye, Layers, Move, ArrowRight } from 'lucide-react';
 
-import productAnalysis from '../assets/product-analysis.svg';
-import productDesign from '../assets/product-design.svg';
-import productTokens from '../assets/product-tokens.svg';
-import productPdf from '../assets/product-pdf.svg';
-import heroDashboard from '../assets/hero-dashboard.svg';
-import heroCode from '../assets/hero-code.svg';
-import abstractDark from '../assets/abstract-dark.svg';
+const productAnalysis = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop&q=80';
+const productDesign = 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1';
+const productTokens = 'https://images.unsplash.com/photo-1557683316-973673baf926?w=800&h=500&fit=crop&q=80';
+const productPdf = 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=800&h=500&fit=crop&q=80';
+const heroDashboard = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop&q=80';
+const heroCode = 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&dpr=1';
+const abstractDark = 'https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?w=800&h=500&fit=crop&q=80';
 
 const productPages = {
   analyzer: {
@@ -116,34 +117,10 @@ export default function ProductSubPage() {
 
   return (
     <>
-      {/* Hero with flowing dotted wave lines like Image 4 */}
+      {/* Hero */}
       <section className="relative pt-10 pb-20 md:pt-16 md:pb-28 overflow-hidden">
-        {/* Flowing wave SVG */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <svg className="absolute right-0 top-0 w-[55%] h-full opacity-[0.1]" viewBox="0 0 500 600" fill="none">
-            {Array.from({ length: 14 }, (_, i) => {
-              const y = 30 + i * 40;
-              const wave = 25 + i * 6;
-              return (
-                <g key={i}>
-                  <path
-                    d={`M 0 ${y} Q 125 ${y - wave} 250 ${y} T 500 ${y}`}
-                    stroke={page.accent}
-                    strokeWidth="0.7"
-                    strokeDasharray="1.5 5"
-                    opacity={0.25 + (i % 4) * 0.1}
-                  />
-                  {Array.from({ length: 16 }, (_, j) => {
-                    const t = j / 16;
-                    const px = t * 500;
-                    const py = y + Math.sin(t * Math.PI * 2 + i * 0.4) * wave * 0.5;
-                    return <circle key={j} cx={px} cy={py} r={0.8} fill={page.accent} opacity={0.15 + Math.sin(t * Math.PI) * 0.25} />;
-                  })}
-                </g>
-              );
-            })}
-          </svg>
-        </div>
+        <CircuitBackground color={page.accent} density={0.45} />
+        <div className="absolute inset-0 mesh-gradient opacity-30 pointer-events-none" />
 
         <Container className="relative z-10">
           <ScrollReveal>
