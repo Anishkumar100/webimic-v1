@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E0622"/>
+      <stop offset="100%" stop-color="#1E1540"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="30%" cy="40%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="70%" cy="60%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect width="1200" height="700" fill="url(#glow1)"/>
+  <rect width="1200" height="700" fill="url(#glow2)"/>
+  
+      <!-- Mock UI chrome -->
+      <rect x="60" y="56" width="1080" height="588" rx="12" fill="#0E0622" stroke="#A78BFA15" stroke-width="1"/>
+      <!-- Titlebar -->
+      <rect x="60" y="56" width="1080" height="42" rx="12" fill="rgba(255,255,255,0.02)"/>
+      <circle cx="108" cy="77" r="4" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="132" cy="77" r="4" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="156" cy="77" r="4" fill="rgba(255,255,255,0.08)"/>
+      <!-- Sidebar -->
+      <rect x="60" y="98.00000000000001" width="216" height="546" fill="rgba(255,255,255,0.015)"/>
+      <rect x="84.00000000000001" y="133" width="156" height="8" rx="4" fill="rgba(255,255,255,0.04)"/>
+      <rect x="84.00000000000001" y="168" width="120" height="8" rx="4" fill="rgba(255,255,255,0.03)"/>
+      <rect x="84.00000000000001" y="203" width="144" height="8" rx="4" fill="rgba(255,255,255,0.03)"/>
+      <rect x="84.00000000000001" y="238.00000000000003" width="108" height="8" rx="4" fill="rgba(255,255,255,0.03)"/>
+      <!-- Main content area -->
+      <rect x="312" y="126" width="384" height="84" rx="8" fill="#A78BFA08" stroke="#A78BFA15" stroke-width="0.5"/>
+      <rect x="744" y="126" width="360" height="84" rx="8" fill="#38BDF808" stroke="#38BDF815" stroke-width="0.5"/>
+      <!-- Chart area -->
+      <rect x="312" y="244.99999999999997" width="792" height="210" rx="8" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+      <!-- Chart bars -->
+      <rect x="348" y="409.06825024108787" width="42.00000000000001" height="24.931749758912158" rx="3" fill="#A78BFA25"/><rect x="410" y="361.6698976788539" width="42.00000000000001" height="72.3301023211461" rx="3" fill="#38BDF815"/><rect x="472" y="372.2181951171609" width="42.00000000000001" height="61.78180488283908" rx="3" fill="#A78BFA15"/><rect x="534" y="366.1285048054977" width="42.00000000000001" height="67.8714951945023" rx="3" fill="#38BDF825"/><rect x="596" y="407.3906500087632" width="42.00000000000001" height="26.60934999123681" rx="3" fill="#A78BFA15"/><rect x="658" y="428.5236437510685" width="42.00000000000001" height="5.47635624893152" rx="3" fill="#38BDF815"/><rect x="720" y="438.4408294788704" width="42.00000000000001" height="-4.440829478870381" rx="3" fill="#A78BFA25"/><rect x="782" y="427.52327387010126" width="42.00000000000001" height="6.4767261298987115" rx="3" fill="#38BDF815"/><rect x="844" y="403.3255569277634" width="42.00000000000001" height="30.67444307223662" rx="3" fill="#A78BFA15"/><rect x="906" y="375.1723665902314" width="42.00000000000001" height="58.8276334097686" rx="3" fill="#38BDF825"/><rect x="968" y="363.36351303762547" width="42.00000000000001" height="70.63648696237453" rx="3" fill="#A78BFA15"/><rect x="1030" y="378.13311448969097" width="42.00000000000001" height="55.86688551030904" rx="3" fill="#38BDF815"/>
+      <!-- Table rows -->
+      <rect x="312" y="489.99999999999994" width="792" height="28" rx="4" fill="rgba(255,255,255,0.01)"/>
+        <rect x="336.00000000000006" y="495.99999999999994" width="144" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="540" y="495.99999999999994" width="96" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="696" y="495.99999999999994" width="180" height="6" rx="3" fill="#A78BFA10"/><rect x="312" y="528.5" width="792" height="28" rx="4" fill="rgba(255,255,255,0.015)"/>
+        <rect x="336.00000000000006" y="534.5" width="144" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="540" y="534.5" width="96" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="696" y="534.5" width="180" height="6" rx="3" fill="#A78BFA10"/><rect x="312" y="567" width="792" height="28" rx="4" fill="rgba(255,255,255,0.02)"/>
+        <rect x="336.00000000000006" y="573" width="144" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="540" y="573" width="96" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="696" y="573" width="180" height="6" rx="3" fill="#A78BFA10"/><rect x="312" y="605.5" width="792" height="28" rx="4" fill="rgba(255,255,255,0.025)"/>
+        <rect x="336.00000000000006" y="611.5" width="144" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="540" y="611.5" width="96" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="696" y="611.5" width="180" height="6" rx="3" fill="#A78BFA10"/>
+    
+  <text x="600" y="350" text-anchor="middle" dominant-baseline="central" font-family="Plus Jakarta Sans,sans-serif" font-size="16" font-weight="600" fill="rgba(255,255,255,0.08)">The Webimic Team</text>
+</svg>

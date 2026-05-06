@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-dark-950: #04000A;
+  --color-dark-900: #080014;
+  --color-dark-800: #0E0622;
+  --color-dark-700: #150D30;
+  --color-dark-600: #1E1540;
+  --color-dark-500: #2A2050;
+  --color-accent-400: #00E8C6;
+  --color-accent-500: #00C9A7;
+  --color-accent-600: #00A88A;
+  --color-blue-400: #38BDF8;
+  --color-blue-500: #0EA5E9;
+  --color-violet-400: #A78BFA;
+  --color-violet-500: #8B5CF6;
+  --color-muted: #9CA3AF;
+  --color-muted-light: #D1D5DB;
+  --color-card-bg: rgba(255,255,255,0.03);
+  --color-card-border: rgba(255,255,255,0.07);
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark-900);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+code, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-dark-950); }
+::-webkit-scrollbar-thumb { background: var(--color-dark-600); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-dark-500); }
+
+/* Logo Marquee Animation */
+@keyframes marquee-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.animate-marquee-left { animation: marquee-left 40s linear infinite; }
+.animate-marquee-right { animation: marquee-right 40s linear infinite; }
+
+/* Glow effects */
+.glow-accent {
+  box-shadow: 0 0 60px rgba(0,232,198,0.15), 0 0 120px rgba(0,232,198,0.05);
+}
+.glow-blue {
+  box-shadow: 0 0 60px rgba(14,165,233,0.15), 0 0 120px rgba(14,165,233,0.05);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-accent-400) 0%, var(--color-blue-400) 50%, var(--color-violet-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card glass effect */
+.glass-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  backdrop-filter: blur(12px);
+}
+
+/* Radial glow background */
+.radial-glow {
+  background: radial-gradient(ellipse at center, rgba(0,232,198,0.08) 0%, transparent 70%);
+}
+.radial-glow-blue {
+  background: radial-gradient(ellipse at center, rgba(14,165,233,0.08) 0%, transparent 70%);
+}
+
+/* Nav dropdown */
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease-out;
+}
+.nav-item:hover .nav-dropdown,
+.nav-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Sticky nav transition */
+.nav-scrolled {
+  background: rgba(8,0,20,0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* FAQ accordion */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+.faq-content.open {
+  max-height: 500px;
+}
+
+/* Tab underline */
+.tab-active {
+  color: #fff;
+  position: relative;
+}
+.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-400), var(--color-blue-400));
+  border-radius: 1px;
+}
+
+/* Page transition */
+.page-enter {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease-out;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0,232,198,0.3);
+  color: #fff;
+}

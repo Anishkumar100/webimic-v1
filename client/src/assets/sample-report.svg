@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04000A"/>
+      <stop offset="100%" stop-color="#0E0622"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="30%" cy="40%">
+      <stop offset="0%" stop-color="#00E8C6" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#00E8C6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="70%" cy="60%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="600" fill="url(#bg)"/>
+  <rect width="1000" height="600" fill="url(#glow1)"/>
+  <rect width="1000" height="600" fill="url(#glow2)"/>
+  
+      <!-- Mock UI chrome -->
+      <rect x="50" y="48" width="900" height="504" rx="12" fill="#04000A" stroke="#00E8C615" stroke-width="1"/>
+      <!-- Titlebar -->
+      <rect x="50" y="48" width="900" height="36" rx="12" fill="rgba(255,255,255,0.02)"/>
+      <circle cx="90" cy="66" r="4" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="110" cy="66" r="4" fill="rgba(255,255,255,0.08)"/>
+      <circle cx="130" cy="66" r="4" fill="rgba(255,255,255,0.08)"/>
+      <!-- Sidebar -->
+      <rect x="50" y="84.00000000000001" width="180" height="468" fill="rgba(255,255,255,0.015)"/>
+      <rect x="70" y="114" width="130" height="8" rx="4" fill="rgba(255,255,255,0.04)"/>
+      <rect x="70" y="144" width="100" height="8" rx="4" fill="rgba(255,255,255,0.03)"/>
+      <rect x="70" y="174" width="120" height="8" rx="4" fill="rgba(255,255,255,0.03)"/>
+      <rect x="70" y="204.00000000000003" width="90" height="8" rx="4" fill="rgba(255,255,255,0.03)"/>
+      <!-- Main content area -->
+      <rect x="260" y="108" width="320" height="72" rx="8" fill="#00E8C608" stroke="#00E8C615" stroke-width="0.5"/>
+      <rect x="620" y="108" width="300" height="72" rx="8" fill="#A78BFA08" stroke="#A78BFA15" stroke-width="0.5"/>
+      <!-- Chart area -->
+      <rect x="260" y="210" width="660" height="180" rx="8" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+      <!-- Chart bars -->
+      <rect x="290" y="348.3679816422331" width="35" height="23.632018357766913" rx="3" fill="#00E8C625"/><rect x="341.6666666666667" y="302.2321063769389" width="35" height="69.76789362306114" rx="3" fill="#A78BFA15"/><rect x="393.3333333333333" y="304.2446366565514" width="35" height="67.75536334344861" rx="3" fill="#00E8C615"/><rect x="445" y="310.8860476319879" width="35" height="61.113952368012114" rx="3" fill="#A78BFA25"/><rect x="496.66666666666663" y="342.031249826662" width="35" height="29.96875017333801" rx="3" fill="#00E8C615"/><rect x="548.3333333333333" y="356.0443735540967" width="35" height="15.955626445903327" rx="3" fill="#A78BFA15"/><rect x="600" y="370.04605778838976" width="35" height="1.9539422116102187" rx="3" fill="#00E8C625"/><rect x="651.6666666666666" y="351.6182039151633" width="35" height="20.381796084836687" rx="3" fill="#A78BFA15"/><rect x="703.3333333333333" y="336.8596524636288" width="35" height="35.14034753637125" rx="3" fill="#00E8C615"/><rect x="755" y="295.16310718836075" width="35" height="76.83689281163922" rx="3" fill="#A78BFA25"/><rect x="806.6666666666666" y="303.10740867716726" width="35" height="68.89259132283273" rx="3" fill="#00E8C615"/><rect x="858.3333333333333" y="323.1784311189797" width="35" height="48.82156888102028" rx="3" fill="#A78BFA15"/>
+      <!-- Table rows -->
+      <rect x="260" y="420" width="660" height="24" rx="4" fill="rgba(255,255,255,0.01)"/>
+        <rect x="280" y="426" width="120" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="450" y="426" width="80" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="580" y="426" width="150" height="6" rx="3" fill="#00E8C610"/><rect x="260" y="453" width="660" height="24" rx="4" fill="rgba(255,255,255,0.015)"/>
+        <rect x="280" y="459" width="120" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="450" y="459" width="80" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="580" y="459" width="150" height="6" rx="3" fill="#00E8C610"/><rect x="260" y="486" width="660" height="24" rx="4" fill="rgba(255,255,255,0.02)"/>
+        <rect x="280" y="492" width="120" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="450" y="492" width="80" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="580" y="492" width="150" height="6" rx="3" fill="#00E8C610"/><rect x="260" y="519" width="660" height="24" rx="4" fill="rgba(255,255,255,0.025)"/>
+        <rect x="280" y="525" width="120" height="6" rx="3" fill="rgba(255,255,255,0.04)"/>
+        <rect x="450" y="525" width="80" height="6" rx="3" fill="rgba(255,255,255,0.03)"/>
+        <rect x="580" y="525" width="150" height="6" rx="3" fill="#00E8C610"/>
+    
+  <text x="500" y="300" text-anchor="middle" dominant-baseline="central" font-family="Plus Jakarta Sans,sans-serif" font-size="16" font-weight="600" fill="rgba(255,255,255,0.08)">Sample Analysis Report</text>
+</svg>
